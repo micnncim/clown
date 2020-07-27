@@ -43,7 +43,7 @@ func run(n int, output string) error {
 		return err
 	}
 
-	filtered := emoji.FilterEmoji(emojis, emoji.FilterOption{
+	filtered := emoji.FilterEmojis(emojis, emoji.FilterOption{
 		Number: n,
 	})
 

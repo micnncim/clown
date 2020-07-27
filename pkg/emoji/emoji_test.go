@@ -62,7 +62,7 @@ func TestFilterEmoji(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
 
-			got := FilterEmoji(tt.args.emojis, tt.args.opt)
+			got := FilterEmojis(tt.args.emojis, tt.args.opt)
 			if diff := cmp.Diff(tt.want, got); diff != "" {
 				t.Errorf("(-want +got):\n%s", diff)
 			}

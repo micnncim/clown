@@ -38,7 +38,7 @@ func NewEmojis(r io.Reader) ([]*Emoji, error) {
 	return emojis, nil
 }
 
-func FilterEmoji(emojis []*Emoji, opt FilterOption) []*Emoji {
+func FilterEmojis(emojis []*Emoji, opt FilterOption) []*Emoji {
 	filtered := make([]*Emoji, 0, len(emojis))
 
 	if opt.Tag != "" {
