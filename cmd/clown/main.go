@@ -11,11 +11,7 @@ import (
 
 	"github.com/micnncim/clown/pkg/emoji"
 	_ "github.com/micnncim/clown/pkg/statik"
-)
-
-var (
-	Version  = "unset"
-	Revision = "unset"
+	"github.com/micnncim/clown/pkg/version"
 )
 
 var (
@@ -28,7 +24,7 @@ func main() {
 	flag.Parse()
 
 	if *versionFlag {
-		fmt.Printf("%s (%s)\n", Version, Revision)
+		fmt.Printf("%s (%s)\n", version.Version, version.Revision)
 		os.Exit(0)
 	}
 
