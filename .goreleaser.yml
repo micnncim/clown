@@ -2,7 +2,7 @@ builds:
 - main: ./cmd/clown/main.go
   ldflags: 
     - -s -w
-    - -X github.com/micnncim/clown/pkg/version.Version={{.Version}}
+    - -X github.com/micnncim/clown/pkg/version.Version={{.Tag}}
     - -X github.com/micnncim/clown/pkg/version.Revision={{.ShortCommit}}
   goos:
   - linux
