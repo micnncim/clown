@@ -1,0 +1,6 @@
+builds:
+- main: ./cmd/clown/main.go
+  goos:
+  - linux
+  - darwin
+  - windows
