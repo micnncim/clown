@@ -14,12 +14,23 @@ import (
 )
 
 var (
-	nFlag = flag.Int("n", 1, "Number of emojis.")
-	oFlag = flag.String("o", "", "Optional format of output for emojis. json is available.")
+	Version  = "unset"
+	Revision = "unset"
+)
+
+var (
+	nFlag       = flag.Int("n", 1, "Number of emojis.")
+	oFlag       = flag.String("o", "", "Optional format of output for emojis. json is available.")
+	versionFlag = flag.Bool("version", false, "Whether showing version of this command.")
 )
 
 func main() {
 	flag.Parse()
+
+	if *versionFlag {
+		fmt.Printf("%s (%s)\n", Version, Revision)
+		os.Exit(0)
+	}
 
 	if err := run(*nFlag, *oFlag); err != nil {
 		log.Fatal(err)
