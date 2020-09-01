@@ -8,3 +8,13 @@ builds:
   - linux
   - darwin
   - windows
+
+# https://goreleaser.com/customization/homebrew/
+brews:
+- tap:
+    owner: micnncim
+    name: homebrew-clown
+  homepage: https://github.com/micnncim/clown
+  description: clown gives you emojis randomly.
+  test: |
+    system "#{bin}/clown -version"
